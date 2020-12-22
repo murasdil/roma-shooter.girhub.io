@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Shooter Game</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>2bc7jaomrlw5k</unique-id>
+    <saved-with-version>27700</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Scirra" id="hardlight">Hard Light</effect>
+        <effect author="Scirra" id="softlight">Soft Light</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1920</width>
+        <height>1200</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Background" sid="274445330567612">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Andrew\Documents\Construct CODDY Partner\background.png" />
+        </object-type>
+        <object-type name="Player" sid="528515543431286">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="174827626418022" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="996534685903377">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="628516262752034" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\Andrew\Documents\Construct CODDY Partner\player.png">
+                        <image-point name="Pistol" x="0.916667" y="0.504854" />
+                        <image-point name="Flamethrower" x="1.22222" y="0.504854" />
+                        <collision-poly>
+                            <point x="0.240741" y="0.252427" />
+                            <point x="0.5" y="0.0776699" />
+                            <point x="0.685185" y="0.330097" />
+                            <point x="0.944444" y="0.495146" />
+                            <point x="0.703704" y="0.68932" />
+                            <point x="0.5" y="0.961165" />
+                            <point x="0.194444" y="0.796117" />
+                            <point x="0.0462963" y="0.495146" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="472294952340678">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="405632755811744">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Bullet" sid="465894992754951">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="947242693600448">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="869336592452535" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="C:\Users\Andrew\Documents\Construct CODDY Partner\bullet.png">
+                        <collision-poly>
+                            <point x="0.16" y="0.25" />
+                            <point x="0.48" y="0.25" />
+                            <point x="0.8" y="0.3125" />
+                            <point x="0.92" y="0.5" />
+                            <point x="0.8" y="0.6875" />
+                            <point x="0.48" y="0.75" />
+                            <point x="0.16" y="0.75" />
+                            <point x="0.08" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Monster" sid="592658075833060">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="health" sid="293814270672251" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="857658659661763">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219603820967768" speed="5">
+                    <frame duration="1" hotspotX="0.503448" hotspotY="0.5" original-source="C:\Users\Andrew\Documents\Construct CODDY Partner\monster.png">
+                        <collision-poly>
+                            <point x="0.268966" y="0.39" />
+                            <point x="0.496552" y="0.24" />
+                            <point x="0.931035" y="0.1" />
+                            <point x="0.724138" y="0.5" />
+                            <point x="0.931035" y="0.9" />
+                            <point x="0.496552" y="0.75" />
+                            <point x="0.248276" y="0.64" />
+                            <point x="0.0206897" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOverText" sid="964690835183316">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="health" sid="865319048773730">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Andrew\Documents\Construct CODDY Partner\Shooter Game 2nd Video\heart.png" />
+        </object-type>
+        <object-type name="Explosion" sid="725985735295688">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="768668526383967">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="346896204499011" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504951" original-source="C:\Users\Andrew\Documents\Construct CODDY Partner\Shooter Game 2nd Video\explosion.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="laser" sid="716587145435090">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="181626114554712">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="863132405530324">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="HardLight">
+                    <effect id="hardlight" />
+                </effect-type>
+                <effect-type name="SoftLight">
+                    <effect id="softlight" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="838524492955704" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="C:\Users\Andrew\Documents\Construct CODDY Partner\Shooter Game 3rd Video\Laser.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Flame" sid="336259170530145">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="843805294461516">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="539412788480317">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739531631484083" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504951" original-source="C:\Users\Andrew\Documents\Construct CODDY Partner\Shooter Game 3rd Video\explosion.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LaserHit" sid="573187569800635">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="950195268407428">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="175961932270878">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="143779543204351" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Rocket" sid="855415491060453">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="currentSpeed" sid="236713837165619" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="726948497037801">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="381452706466048" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5">
+                        <image-point name="ExplosionPoint" x="0.5125" y="0.5" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RocketExplosion" sid="157284419371285">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="693254928070025">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="540298047430491" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504951" original-source="C:\Users\Andrew\Google Drive\Construct для партнера\Проекты игр\Shooter Game 4\explosion.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScoreText" sid="131061859401545">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="RestartButton" sid="610036040320378">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="459038116277187" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RocketFlame" sid="635120202959919">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="745114322182707">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="857734260640019">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="128488799731184" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504951" original-source="C:\Users\Andrew\Google Drive\Construct для партнера\Проекты игр\Shooter Game 4\explosion.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MedKit" sid="355959102820282">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="817648540855500" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Level 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="2" />
+        <global-instance type="Mouse" uid="3" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
