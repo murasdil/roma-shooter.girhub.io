@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Лист событий 1</name>
+    <events>
+        <variable constant="0" name="CurrentWeapon" sid="735253009682911" static="0" type="text">pistol</variable>
+        <variable constant="0" name="CurrentWeapon2" sid="343902738584329" static="0" type="text">Lazer</variable>
+        <variable constant="0" name="Gameover" sid="558220855596053" static="0" type="number">0</variable>
+        <variable constant="0" name="ребята" sid="901141053129992" static="0" type="text">Text</variable>
+        <event-block sid="724722261610758">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="508893443643082" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="122199700870037" type="GemiOver">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="478146249822337" type="pul" />
+                <action id="-9" name="Destroy" sid="133789579784363" type="theJou" />
+                <action id="-15" name="Set visible" sid="962738741958193" type="Sprite8">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>w a s d</comment>
+        <event-block sid="794751998406600">
+            <conditions>
+                <condition id="0" name="On click" sid="254284304932038" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="866297146983402" type="theRzum">
+                    <param id="0" name="Object">pul</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="645972866376189">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="397517117391371" type="System">
+                            <param id="0" name="Variable">CurrentWeapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Lazer&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="925199635017714">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="252231713579188" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="944201692641490" type="theRzum">
+                                    <param id="0" name="Object">Lazer</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="979514270731704" type="Lazer">
+                                    <param id="0" name="Pin to">theRzum</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="390461551560249">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="811210508872442" type="System">
+                            <param id="0" name="Variable">CurrentWeapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;SMG&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="390775654672285">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="918610405609283" type="System">
+                                    <param id="0" name="Interval (seconds)">0.13</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="686460682465638" type="theRzum">
+                                    <param id="0" name="Object">pul</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="119671225328948" type="pul">
+                                    <param id="0" name="Speed">1500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="577154535505644">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="340965034683236" type="System">
+                            <param id="0" name="Variable">CurrentWeapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;pistol&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="312833222155464">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="764850785928973" type="System">
+                                    <param id="0" name="Interval (seconds)">0.2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="779799118471906" type="theRzum">
+                                    <param id="0" name="Object">pul</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="661807379400874">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="693962820016563" type="System">
+                            <param id="0" name="Variable">CurrentWeapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BUM&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="486333511823646">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="671384573413441" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="414923783364621" type="theRzum">
+                                    <param id="0" name="Object">BUM</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="106692476064520">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="359605531724536" type="System">
+                            <param id="0" name="Variable">CurrentWeapon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;roman&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="230013832218942" type="theRzum">
+                            <param id="0" name="Object">roman</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="276392987194201" type="roman">
+                            <param id="0" name="Degrees">random(-30.30)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="808693178595850">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="516226466606163">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="469527552389052" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="365049335043511" type="theRzum">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="-21" name="Rotate toward position" sid="170453419858285" type="theJou">
+                    <param id="0" name="Degrees">5</param>
+                    <param id="1" name="X">theRzum.X</param>
+                    <param id="2" name="Y">theRzum.Y</param>
+                </action>
+                <action id="-5" name="Set width" sid="210683585684884" type="dede">
+                    <param id="0" name="Width"> theRzum.helth*74</param>
+                </action>
+                <action id="-21" name="Rotate toward position" sid="593381165593983" type="BUM">
+                    <param id="0" name="Degrees">1</param>
+                    <param id="1" name="X">theJou.x</param>
+                    <param id="2" name="Y">theJou.y</param>
+                </action>
+                <action id="-11" name="Add to" sid="100695959633814" type="BUM">
+                    <param id="0" name="Instance variable">BUM</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="134758663382290" type="BUM">
+                    <param id="0" name="Speed">BUM.BUM</param>
+                </action>
+                <action id="-11" name="Add to" sid="393872708476192" type="BUM">
+                    <param id="0" name="Instance variable">BUM</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="458707372086579">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="413925422342752" type="System">
+                            <param id="0" name="Variable">Gameover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="366901350084051">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="875322306166296" type="theJou">
+                    <param id="0" name="Object">theRzum</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="191130843968405" type="theRzum">
+                    <param id="0" name="Instance variable">helth</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="946854909629718" type="theJou" />
+            </actions>
+        </event-block>
+        <event-block sid="626999725545973">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="182709097790991" type="Lazer">
+                    <param id="0" name="Object">theJou</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="430524511116743" type="theJou">
+                    <param id="0" name="Instance variable">hels</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="588381484919361">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="818647472899369" type="roman">
+                    <param id="0" name="Object">theJou</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="681675190694942" type="theJou">
+                    <param id="0" name="Instance variable">hels</param>
+                    <param id="1" name="Value">0.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="525955921773505">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="813312207931745" type="pul">
+                    <param id="0" name="Object">theJou</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="973173733086025" type="theJou">
+                    <param id="0" name="Instance variable">hels</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="510801678704447" type="pul" />
+                <action id="0" name="Spawn another object" sid="894410063488931" type="pul">
+                    <param id="0" name="Object">roman</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="422802335824672" title="WADS">
+            <sub-events>
+                <event-block sid="572388316783802">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="680581153768643" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="282450768998264" type="theRzum">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="651063146288347">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="554440232285243" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="368587127487444" type="theRzum">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="561577805164713">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="212627415871469" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="763946427434591" type="theRzum">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="921774427248045">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="651188836153971" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="309732580764023" type="theRzum">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="904172718920373" title="MONster spaun">
+                    <sub-events>
+                        <event-block sid="250941820260312">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="601081878504802" type="System">
+                                    <param id="0" name="Interval (seconds)">3.0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="794663754457997" type="System">
+                                    <param id="0" name="Object to create">theJou</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">LayoutHeight</param>
+                                    <param id="3" name="Y">100</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="955067903152601" type="System">
+                                    <param id="0" name="Object to create">theJou</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">LayoutHeight</param>
+                                    <param id="3" name="Y">LayoutHeight</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="317739805892795" type="System">
+                                    <param id="0" name="Object to create">theJou</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">LayoutHeight</param>
+                                    <param id="3" name="Y">600</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="356333666254909">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="617186360017093" type="theRzum">
+                    <param id="0" name="Instance variable">helth</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="185838957715452" type="theRzum" />
+                <action id="-15" name="Set visible" sid="720764598746853" type="GemiOver">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="111084381775958" type="System">
+                    <param id="0" name="Group name">&quot;MONster spaun&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="502412988750330" type="System">
+                    <param id="0" name="Variable">Gameover</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="337970642476178" type="Sprite8">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="838966436972266">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="919331529179677" type="theJou">
+                    <param id="0" name="Instance variable">hels</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="651258100457326" type="theJou" />
+            </actions>
+        </event-block>
+        <event-block sid="722512100195585">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="714360424969273" type="Keyboard">
+                    <param id="0" name="Key">49</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="341505323114756" type="System">
+                    <param id="0" name="Variable">CurrentWeapon</param>
+                    <param id="1" name="Value">&quot;pistol&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="139263074466552">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="221757161117638" type="Keyboard">
+                    <param id="0" name="Key">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="162344909341681" type="System">
+                    <param id="0" name="Variable">CurrentWeapon</param>
+                    <param id="1" name="Value">&quot;SMG&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="242359746697122">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="895697914723117" type="Keyboard">
+                    <param id="0" name="Key">51</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="745834260324081" type="System">
+                    <param id="0" name="Variable">CurrentWeapon</param>
+                    <param id="1" name="Value">&quot;Lazer&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="581272874874269">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="500137501035631">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="173438126322068" type="Keyboard">
+                    <param id="0" name="Key">52</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="413860334479650" type="System">
+                    <param id="0" name="Variable">CurrentWeapon</param>
+                    <param id="1" name="Value">&quot;roman&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="726894059136649">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="180661001206276" type="Keyboard">
+                    <param id="0" name="Key">53</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="276835356863420" type="System">
+                    <param id="0" name="Variable">CurrentWeapon</param>
+                    <param id="1" name="Value">&quot;ЕКЕК&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="225359837882213">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="914083902451598" type="System">
+                    <param id="0" name="Variable">CurrentWeapon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;ЕКЕК&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="217888206412906" type="theRzum">
+                    <param id="0" name="Object">roman</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">2</param>
+                </action>
+                <action id="-18" name="Rotate clockwise" sid="929497871318584" type="roman">
+                    <param id="0" name="Degrees">random(-30.30)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="379498053873766">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="316675305755726" type="Keyboard">
+                    <param id="0" name="Key">54</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="435647876563122" type="System">
+                    <param id="0" name="Variable">CurrentWeapon</param>
+                    <param id="1" name="Value">&quot;BUM&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="579220770506486">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="167710801537964" type="BUM">
+                    <param id="0" name="Object">theJou</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="836617575229769" type="theJou">
+                    <param id="0" name="Instance variable">hels</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+                <action id="-9" name="Destroy" sid="831293630516345" type="BUM" />
+                <action id="0" name="Spawn another object" sid="534521496450973" type="BUM">
+                    <param id="0" name="Object">roman</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="9" name="Set scale" sid="533695404667609" type="Sprite12">
+                    <param id="0" name="Scale">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="499119408051375">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="295163173057116" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite8</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="934074370958459" type="System">
+                    <param id="0" name="Variable">Gameover</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="117949265497338" type="System" />
+                <action id="-21" name="Reset global variables" sid="662995926631166" type="System" />
+            </actions>
+            <sub-events>
+                <event-block sid="518624212214217">
+                    <conditions />
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
